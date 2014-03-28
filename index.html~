@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html lang="NL">
+    <head>
+      <title>BMI</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/jquery.mobile.css" />
+	  <script src="lib/jquery.js"></script>
+      <script src="lib/jquery.mobile.js" ></script>
+	    <script src="js/bmi1.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <div data-role="page" id="bmi_calc_page" data-theme="a">
+        <div data-role="header">
+		  <h1>BMI bepaling</h1>
+		</div>
+        <div data-role="content">
+        
+		
+		<!-- Geef hier de html voor:
+		     -- label + inputveld voor de lengte
+			 -- label + inputveld voor het gewicht
+			 -- button voor het berekenen van de BMI
+             -- button voor het opslaan van de BMI
+        -->
+				Lengte (cm): <input id="lengte" type="text" size="4" />
+				Gewicht (kg) : <input id="gewicht" type="text" size="4" />
+				BMI: <span id="veld"></span>
+				<button onClick="bmi()";>Bereken</button>
+	
+	      <div data-role="fieldcontainer">
+            <a href="#bmi_overzicht_page" data-role="button" >Naar overzicht</a>		  
+          </div>
+		</div>
+		
+        <div data-role="footer" data-position="fixed">
+		  <h4>Open Universiteit Workshop Apps</h4>
+		</div>
+	</div>
+
+    <div id="bmi_overzicht_page" data-role="page">
+    	<div data-role="header">
+		  <a href="#bmi_calc_page" data-icon="back">Back</a>
+		  <h1>BMI overzicht</h1>
+		</div>
+	   
+ 	    <div data-role="content">
+		  <div data-role="fieldcontainer" id="bmiHistory">
+          </div>	
+		</div>
+	</div>	
+
+	
+    </body>
+  </html>
